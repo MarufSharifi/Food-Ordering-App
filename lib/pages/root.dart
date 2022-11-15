@@ -71,4 +71,10 @@ class _RootAppState extends State<RootApp> {
                   ))),
     );
   }
+
+  Widget getBarPage() {
+    return IndexedStack(
+        index: activeTab,
+        children: List.generate(tapIcons.length, (index) => pages[index]));
+  }
 }
